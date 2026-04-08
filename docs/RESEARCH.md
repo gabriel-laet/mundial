@@ -10,7 +10,8 @@
 |--------|----------|------|------------|
 | **Fjelstul World Cup DB** | Historical analysis (1930-2022) | Free | 27 datasets, 1.58M data points |
 | **StatsBomb Open Data** | Deep event-level analysis (select tournaments) | Free | Event-level with 360 freeze frames |
-| **Kaggle piterfm dataset** | Quick start, match-level analysis | Free | Match results, all World Cups |
+| **Mart Jurisoo Intl Results** | Broadest match coverage (1872-2025) | Free | 49K matches, goals, shootouts |
+| **Kaggle piterfm dataset** | Quick start, match-level with xG | Free | Match results + xG, all World Cups |
 | **football-data.org** | API-based access, prototyping | Free tier | Matches, scores, standings |
 | **API-Football** | Live + historical via REST API | From $19/mo | Full coverage, 1200+ leagues |
 
@@ -59,43 +60,93 @@
 
 ---
 
-### 1.3 Kaggle Datasets
+### 1.3 International Football Results 1872-2026 (Mart Jurisoo)
+
+- **URL:** https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017
+- **GitHub:** https://github.com/martj42/international_results
+- **Format:** CSV (4 files, ~1.26 MB)
+- **License:** CC0 Public Domain
+- **Downloads:** 130,000+ on Kaggle
+- **Last Updated:** April 2026 (actively maintained with daily updates!)
+- **Coverage:** 1872-2025, **49,016 matches** — ALL international football, not just World Cup
+
+**Files:**
+1. `results.csv` — date, home_team, away_team, home_score, away_score, tournament, city, country, neutral
+2. `goalscorers.csv` — date, teams, scorer, own_goal, penalty (no minute data)
+3. `shootouts.csv` — date, teams, winner, first_shooter
+4. `former_names.csv` — historical team name changes
+
+**Verdict:** The most comprehensive international results dataset. Filter by `tournament = "FIFA World Cup"` for WC data. Also gives you qualifiers, friendlies, and every other competition for context. Actively maintained — the most current free source available.
+
+---
+
+### 1.4 Kaggle Datasets
 
 #### piterfm: FIFA World Cup 1930-2022
 - **URL:** https://www.kaggle.com/datasets/piterfm/fifa-football-world-cup
-- **Files:** `matches_1930_2022.csv` and related files
+- **Files:** `matches_1930_2022.csv`, `fifa_ranking_2022-10-06.csv`, `world_cup.csv` (~184 KB)
 - **Coverage:** All World Cups 1930-2022
-- **Best for:** Quick-start match-level analysis
+- **Includes:** Scores, xG, managers, captains, goal scorers, penalty takers, cards, substitutions, attendance, venue, referee
+- **Best for:** Rich match-level analysis with xG data — unique among historical datasets
 
 #### jahaidulislam: FIFA World Cup All Goals 1930-2022
 - **URL:** https://www.kaggle.com/datasets/jahaidulislam/fifa-world-cup-all-goals-1930-2022-dataset
 - **Coverage:** Every goal scored in World Cup history
 - **Best for:** Goal-scoring analysis, top scorers, goal distribution
 
-#### iamsouravbanerjee: FIFA Football World Cup Dataset
-- **URL:** https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset
-- **Coverage:** Comprehensive World Cup data
-- **Best for:** Tournament-level summaries and statistics
+#### abecklas: FIFA World Cup (95K+ downloads)
+- **URL:** https://www.kaggle.com/datasets/abecklas/fifa-world-cup
+- **Files:** `WorldCupMatches.csv`, `WorldCups.csv`, `WorldCupPlayers.csv`
+- **Coverage:** 1930-2014 (does NOT include 2018 or 2022)
+- **Best for:** One of the most popular/cited WC datasets. Good starting point but outdated.
 
 #### die9origephit: FIFA World Cup 2022 Complete Dataset
 - **URL:** https://www.kaggle.com/datasets/die9origephit/fifa-world-cup-2022-complete-dataset
-- **Coverage:** Qatar 2022 only, detailed
-- **Best for:** Deep dive into the most recent completed World Cup
+- **Coverage:** Qatar 2022 only — possession, crosses, passes, fouls, attempts, offsides, cards, assists
+- **Best for:** Detailed per-match statistics for the most recent completed World Cup
 
-#### abecklas: FIFA World Cup
-- **URL:** https://www.kaggle.com/datasets/abecklas/fifa-world-cup
-- **Coverage:** Historical summary data
-- **Best for:** High-level tournament comparisons
+#### swaptr: FIFA World Cup 2022 Player Data
+- **URL:** https://www.kaggle.com/datasets/swaptr/fifa-world-cup-2022-player-data
+- **Source:** FBref
+- **Coverage:** 2022 World Cup, player-level statistics
+- **Best for:** Individual player performance analysis for Qatar 2022
+
+#### iamsouravbanerjee: FIFA Football World Cup Dataset
+- **URL:** https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset
+- **Source:** fifa.com
+- **Coverage:** 1930-2022 tournament-level records
+- **Best for:** Tournament-level summaries and statistics
 
 ---
 
-### 1.4 OpenFootball (worldcup.json)
+### 1.5 OpenFootball (worldcup.json)
 
 - **URL:** https://github.com/openfootball/worldcup.json
-- **Coverage:** Multiple World Cups including 2018, 2022, 2026
+- **Coverage:** Multiple World Cups from 1930 through 2026
 - **Format:** JSON, no API key required
 - **License:** Public domain
 - **Best for:** Simple match data in JSON format, easy to consume programmatically
+
+---
+
+### 1.6 FBref / worldfootballR (Programmatic Access)
+
+- **FBref:** https://fbref.com/en/comps/1/World-Cup-Stats
+- **R package:** https://jaseziv.github.io/worldfootballR/
+- **Python:** https://pypi.org/project/ScraperFC/
+- **Format:** Scrape to CSV/DataFrame
+- **Coverage:** Complete World Cup history with detailed player statistics (powered by StatsBomb for recent seasons)
+- **Best for:** Most detailed player-level stats available. Not a downloadable dataset but clean programmatic access via R/Python packages.
+
+---
+
+### 1.7 Maven Analytics World Cup Dataset
+
+- **URL:** https://mavenanalytics.io/data-playground/world-cup
+- **Format:** CSV
+- **License:** Public Domain
+- **Records:** 499 records, 25 fields
+- **Best for:** Curated dataset designed for analytics practice
 
 ---
 

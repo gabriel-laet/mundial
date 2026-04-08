@@ -45,7 +45,7 @@
 ### 1.2 StatsBomb Open Data (BEST for granular event-level analysis)
 
 - **URL:** https://github.com/statsbomb/open-data
-- **Coverage:** Select tournaments including 2018 WC, 2022 WC, 2023 Women's WC
+- **Coverage:** Men's WC: **2022, 2018, 1990, 1986, 1974, 1970, 1962, 1958**. Women's WC: **2023, 2019**. Also FIFA U20 WC 1979.
 - **Format:** JSON (exported from StatsBomb Data API)
 - **License:** Free for non-commercial use (attribution required)
 
@@ -111,15 +111,32 @@
 - **Rate limit:** 10 requests/minute on free tier
 - **Best for:** Prototyping, hobby projects, dashboards
 
-### 2.2 BALLDONTLIE FIFA API
+### 2.2 TheSportsDB
+
+- **URL:** https://www.thesportsdb.com
+- **Cost:** Free (use API key "3"); Premium $9/mo via Patreon
+- **Coverage:** FIFA World Cup listed as supported league
+- **Data (Free):** Events/fixtures, results, team info, player info, logos/banners/fanart
+- **Data (Premium):** 2-minute livescores, video highlights, V2 API
+- **Best for:** Basic match results + team/player lookups + sports artwork/media
+
+### 2.3 World Cup JSON (worldcupjson.net)
+
+- **URL:** https://worldcupjson.net
+- **Cost:** Completely free, no API key
+- **Coverage:** WC 2014, 2018, 2022; Women's WC 2015, 2019; likely 2026
+- **Data:** Match results, scores, events (goals/subs/cards), team records, filtering by country/date
+- **Best for:** Quick prototyping, lightweight access, no auth required
+
+### 2.4 BALLDONTLIE FIFA API
 
 - **URL:** https://fifa.balldontlie.io/
-- **Cost:** Free account available
-- **Coverage:** World Cup 2026
-- **Data:** Teams, stadiums, matches, standings, odds, futures
-- **Best for:** 2026 World Cup live data
+- **Cost:** Free ($0, 5 req/min, Teams & Stadiums only); ALL-STAR $9.99/mo; GOAT $39.99/mo
+- **Coverage:** World Cup 2026 only (no historical data)
+- **Data:** Teams, stadiums, group standings, match fixtures/scores, betting odds (DraftKings/FanDuel)
+- **Best for:** 2026-specific applications, especially with betting data
 
-### 2.3 WC2026 API
+### 2.5 WC2026 API
 
 - **URL:** https://www.wc2026api.com/
 - **Cost:** Free tier (no credit card), Pro plan available
@@ -134,39 +151,47 @@
 ### 3.1 API-Football (via RapidAPI)
 
 - **URL:** https://www.api-football.com / https://rapidapi.com/api-sports/api/api-football
-- **Cost:** From $19/month (all plans include all competitions)
-- **Coverage:** 1,200+ leagues and cups, several years of historical data
-- **Data:** Livescore, standings, events, lineups, players, pre-match odds, statistics
-- **Best for:** Production apps needing broad football coverage
+- **Pricing:** Free $0 (100 req/day, limited seasons) | Pro $19/mo (7,500/day) | Ultra $29/mo (75K/day) | Mega $39/mo (150K/day)
+- **Coverage:** 1,200+ leagues and cups, several years of historical data. All plans include all competitions and endpoints.
+- **Data:** Fixtures, livescores, lineups, match events, standings, top scorers, player info, coaches, transfers, trophies, injuries, odds, statistics, predictions, H2H
+- **Best for:** Best value paid option. Production apps needing broad football coverage.
 
 ### 3.2 Sportmonks
 
 - **URL:** https://www.sportmonks.com/football-api/world-cup-api/
-- **Cost:** Paid (early-bird pricing available for WC 2026)
-- **Coverage:** Historical World Cup data from past editions + 2026
-- **Data:** Comparison tools, historical dashboards, long-term analytics
-- **Best for:** Enterprise-grade applications
+- **Pricing:** Starter 29 EUR/mo (5 leagues) | Growth 99 EUR/mo (30 leagues) | Pro 249 EUR/mo (120 leagues) | **WC 2026 Special: 69 EUR one-time** | WC 2026 All-in: 129 EUR one-time | 14-day free trial
+- **Coverage:** 2,500+ leagues. Historical World Cup data from past editions + 2026
+- **Data:** Fixtures, live scores, in-game events, squads, player stats, advanced analytics (xG, pressure), lineups, venues, broadcasts, injuries, standings, groups, knockout info
+- **Best for:** Advanced analytics with xG. The 69 EUR one-time WC special is great value.
 
-### 3.3 SportsDataIO
+### 3.3 Live-Score-API
+
+- **URL:** https://live-score-api.com
+- **Pricing:** Free trial 14 days (1,500 req/day) | Starter 11 EUR/mo | Professional 26 EUR/mo | Premium 69 EUR/mo | Commentary 190 EUR/mo (**92 years of historical data**)
+- **Coverage:** World Cup included. Top tier claims history back to ~1930s.
+- **Data:** Live scores, fixtures, match events, standings, historical data, lineups, H2H, odds, multi-language
+- **Best for:** Maximum historical depth at the Commentary tier
+
+### 3.4 SportsDataIO
 
 - **URL:** https://sportsdata.io/fifa-world-cup-api
-- **Cost:** Paid
-- **Coverage:** FIFA World Cup
-- **Best for:** US-focused sports data platforms
+- **Cost:** Contact sales (no public pricing). No free WC tier.
+- **Data:** Real-time scores, lineups, stats, betting odds (20+ sportsbooks), fantasy projections, historical data via "Vault" product
+- **Best for:** Enterprise/commercial applications, betting platforms, fantasy sports
 
-### 3.4 Data Sports Group (DSG)
+### 3.5 Data Sports Group (DSG)
 
 - **URL:** https://datasportsgroup.com/fifa-world-cup-data/
-- **Cost:** Paid
+- **Cost:** Paid (contact sales)
 - **Data:** Live widgets, feeds, historical data
 - **Best for:** Embeddable widgets and commercial applications
 
-### 3.5 Statorium
+### 3.6 Statorium
 
 - **URL:** https://statorium.com/fifa-world-cup-2026-api
-- **Cost:** Paid
-- **Coverage:** World Cup 2026
-- **Best for:** 2026-specific API needs
+- **Cost:** Premium package (fixed price, not publicly listed)
+- **Data:** Live scores, player events (goals/penalties/cards/assists), match stats (fouls, shots, possession, corners)
+- **Best for:** Real-time 2026 match coverage
 
 ---
 
